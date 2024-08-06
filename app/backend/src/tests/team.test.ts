@@ -36,12 +36,11 @@ describe('Team Routes', () => {
     chaiHttpResponse = await chai.request(app).get('/teams');
 
     expect(chaiHttpResponse.status).to.equal(200);
-    expect(chaiHttpResponse.body).to.deep.equal({
-      data: [
+    expect(chaiHttpResponse.body).to.deep.equal([
         { id: 1, teamName: 'Grêmio' },
         { id: 2, teamName: 'Bahia' },
       ],
-    });
+    );
   });
 
   it('deve retornar um time específico pesquisado pelo id', async () => {
