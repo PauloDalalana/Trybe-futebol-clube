@@ -1,7 +1,6 @@
 import * as express from 'express';
 import 'express-async-errors';
-import teamRouter from './routes/team.route';
-import loginRouter from './routes/login.route';
+import routes from './routes';
 
 import errorMiddleware from './middlewares/errorMiddleware';
 
@@ -15,9 +14,7 @@ class App {
 
     // Não remover essa rota
     this.app.get('/', (req, res) => res.json({ ok: true }));
-
-    this.app.use('/teams', teamRouter);
-    this.app.use('/login', loginRouter);
+    this.app.use(routes);
 
     // Não remova esse middleware de erro, mas fique a vontade para customizá-lo
     // Mantenha ele sempre como o último middleware a ser chamado
