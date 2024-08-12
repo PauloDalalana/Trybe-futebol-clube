@@ -4,6 +4,7 @@ import {
   InferAttributes,
   InferCreationAttributes,
   CreationOptional,
+  HasManyGetAssociationsMixin,
 } from 'sequelize';
 import db from '.';
 import Team from './Team.Model';
@@ -15,6 +16,10 @@ class Matches extends Model<InferAttributes<Matches>, InferCreationAttributes<Ma
   declare awayTeamId: number;
   declare awayTeamGoals: number;
   declare inProgress: boolean;
+  declare getHomeTeam: HasManyGetAssociationsMixin<Team>;
+  declare getAwayTeam: HasManyGetAssociationsMixin<Team>;
+  declare homeTeam?: Team;
+  declare awayTeam?: Team;
 }
 
 Matches.init({
@@ -55,7 +60,8 @@ Matches.init({
   timestamps: false,
   underscored: true,
 });
-
+Team.hasMany(Matches, { foreignKey: 'homeTeamId', as: 'homeMatches' });
+Team.hasMany(Matches, { foreignKey: 'awayTeamId', as: 'awayMatches' });
 Matches.belongsTo(Team, { foreignKey: 'homeTeamId', as: 'homeTeam' });
 Matches.belongsTo(Team, { foreignKey: 'awayTeamId', as: 'awayTeam' });
 

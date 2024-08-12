@@ -23,6 +23,9 @@ export default class MatchesController {
         progress = true;
       } else if (inProgress === 'false') {
         progress = false;
+      } else if (inProgress !== undefined) {
+        return res.status(HTTPStatus.badRequest)
+          .json({ message: 'Invalid parameter value for inProgress' });
       }
 
       const matches = await MatchesService.getAll(progress);
