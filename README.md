@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>README.md</title>
-</head>
 <body>
   <h1>Trybe Futebol Clube</h1>
   <p>Este projeto é uma aplicação desenvolvida em <strong>Node.js</strong> usando <strong>Express</strong> para criar e gerenciar partidas de futebol, além de fornecer endpoints para consultar a classificação de times.</p>
