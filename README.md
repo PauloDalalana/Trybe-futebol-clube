@@ -45,7 +45,7 @@
   </div>
   <br />
   <hr></hr>
-  <h3>Contatos: 😉</h3>
+  <h3>Contatos:</h3>
   <div style="display: flex; gap: 10px;">
     <a href="https://www.linkedin.com/in/paulodalalana/" target="_blank">
       <img alt="Linkedin" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
@@ -57,6 +57,6 @@
       <img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
     </a>
   </div>
-  <p>Vamos nos conectar no <a href="https://www.linkedin.com/in/paulodalalana/" target="_blank">LinkedIn</a>, será uma ótima forma de trocarmos conhecimento e experiência.
+  <p>Vamos nos conectar no <a href="https://www.linkedin.com/in/paulodalalana/" target="_blank">LinkedIn</a>, será uma ótima forma de trocarmos conhecimento e experiência.😉
 </body>
 </html>
