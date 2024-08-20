@@ -12,7 +12,9 @@
     "test:debug": "DEBUG=true npm test",
     "compose:up": "cd app && docker-compose up -d --build",
     "compose:down": "cd app && docker-compose down --remove-orphans",
-    "logs": "cd app && docker-compose logs -f"
+    "logs": "cd app && docker-compose logs -f",
+    "predeploy": "cd ./app/frontend && npm run build",
+    "deploy": "gh-pages -d app/frontend/build"
   },
   "author": "Trybe",
   "devDependencies": {
@@ -25,7 +27,8 @@
     "mysql2": "2.3.3",
     "nyc": "15.1.0",
     "sequelize": "6.25.5",
-    "sequelize-cli": "6.4.1"
+    "sequelize-cli": "6.4.1",
+    "gh-pages": "^4.0.0"
   },
   "dependencies": {
     "camelcase": "6.3.0",
